@@ -794,10 +794,10 @@ function refreshAllVisibleUI(){
 
    ★ لإضافة عضو جديد لأي فريق موجود:
      انسخ سطر عضو وغيّر name / pin / role:
-     {name:'اسم العضو', pin:'1234', role:'viewer'}
+     {name:'اسم العضو', pin:'1234', role:''}
 
      الأدوار المتاحة (role):
-       'viewer'        → عضو عادي، يشوف مهامه فقط
+       ''        → عضو عادي، يشوف مهامه فقط
        'editor'        → قائد فريق، يدير كل مهام الفريق (يظهر تلقائياً
                           في قائمة "وكّل مهمة" عند أي super_editor)
        'super_editor'  → مدير — يفتح تاب "⭐ لوحتي" تلقائياً، يقدر يوكّل
@@ -821,13 +821,13 @@ function refreshAllVisibleUI(){
         ⚠️ مهم: id و pk يجب أن يكونا فريدين (ما يتكررون في أي فريق ثاني)
 
    ★ لإضافة فريق عمل جديد (تحت مدير):
-     نفس القالب فوق، لكن الأعضاء أدوارهم 'editor' أو 'viewer':
+     نفس القالب فوق، لكن الأعضاء أدوارهم 'editor' أو '':
 
         {id:'new_team_id',name:'اسم الفريق الجديد',icon:'🎯',
          pk:'new_team_pk',dashPin:'2099',
          members:[
            {name:'قائد الفريق',pin:'1111',role:'editor'},
-           {name:'عضو 1',pin:'2222',role:'viewer'},
+           {name:'عضو 1',pin:'2222',role:''},
          ]},
 
      ثم أضف المدير المسؤول عنه بـ role:'super_editor' داخل فريقه
@@ -841,10 +841,10 @@ const TEAMS=[
    members:[
      {name:'قائد الفريق (مدير)',nameEn:'Team Lead (Manager)',pin:'',role:'super_editor'},
      {name:'عضو محرر',nameEn:'Editor Member',pin:'',role:'editor'},
-     {name:'عضو 1',nameEn:'Member 1',pin:'',role:'viewer'},
-     {name:'عضو 2',nameEn:'Member 2',pin:'',role:'viewer'},
-     {name:'عضو 3',nameEn:'Member 3',pin:'',role:'viewer'},
-     {name:'عضو 4',nameEn:'Member 4',pin:'',role:'viewer'},
+     {name:'عضو 1',nameEn:'Member 1',pin:'',role:''},
+     {name:'عضو 2',nameEn:'Member 2',pin:'',role:''},
+     {name:'عضو 3',nameEn:'Member 3',pin:'',role:''},
+     {name:'عضو 4',nameEn:'Member 4',pin:'',role:''},
    ]},
 {id:'NCR Team',name:'فريق عدم المطابقة',nameEn:'Non-Conformance Team',icon:'⚙️',pk:'tasks_team2',dashPin:'',
    members:[
